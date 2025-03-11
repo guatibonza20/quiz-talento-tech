@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Programación Básica</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="quiz-container">
+    <!-- Pantalla de bienvenida y solicitud de nombre -->
+    <div id="studentName" class="welcome-screen">
+        <h1>Bienvenido al Quiz de Programación Básica</h1>
+        <p>Por favor, ingresa tu nombre:</p>
+        <input type="text" id="studentNameInput" placeholder="Escribe tu nombre">
+        <button onclick="startQuiz()">Iniciar Quiz</button>
+    </div>
+
+    <!-- Preguntas -->
+    <div id="quizQuestions" style="display:none;">
+        <h2>Preguntas del Quiz</h2>
+
+        <!-- Pregunta 1 -->
+        <div class="question">
+            <p>1. ¿Cuál de los siguientes elementos es utilizado para definir un encabezado en HTML?</p>
+            <div class="options">
+                <label><input type="radio" name="html_q1" value="a"> <strong>&lt;header&gt;</strong></label>
+                <label><input type="radio" name="html_q1" value="b"> <strong>&lt;h1&gt;</strong></label>
+                <label><input type="radio" name="html_q1" value="c"> <strong>&lt;div&gt;</strong></label>
+                <label><input type="radio" name="html_q1" value="d"> <strong>&lt;p&gt;</strong></label>
+            </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question">
+            <p>2. ¿Qué hace el siguiente elemento en HTML: <strong>&lt;a href="link"&gt;Texto&lt;/a&gt;</strong>?</p>
+            <div class="options">
+                <label><input type="radio" name="html_q2" value="a"> Crea un enlace a otro sitio web.</label>
+                <label><input type="radio" name="html_q2" value="b"> Crea un párrafo con un texto en negrita.</label>
+                <label><input type="radio" name="html_q2" value="c"> Crea una imagen con un enlace.</label>
+                <label><input type="radio" name="html_q2" value="d"> Crea una lista numerada.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question">
+            <p>3. ¿Qué atributo se usa para definir un enlace en HTML?</p>
+            <div class="options">
+                <label><input type="radio" name="html_q3" value="a"> href</label>
+                <label><input type="radio" name="html_q3" value="b"> link</label>
+                <label><input type="radio" name="html_q3" value="c"> src</label>
+                <label><input type="radio" name="html_q3" value="d"> url</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question">
+            <p>4. ¿Cuál es la propiedad de CSS que cambia el color de fondo de una página?</p>
+            <div class="options">
+                <label><input type="radio" name="css_q1" value="a"> background-color</label>
+                <label><input type="radio" name="css_q1" value="b"> color</label>
+                <label><input type="radio" name="css_q1" value="c"> background</label>
+                <label><input type="radio" name="css_q1" value="d"> text-color</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question">
+            <p>5. ¿Cómo se cambia el tamaño de la fuente de un texto en CSS?</p>
+            <div class="options">
+                <label><input type="radio" name="css_q2" value="a"> font-size</label>
+                <label><input type="radio" name="css_q2" value="b"> text-size</label>
+                <label><input type="radio" name="css_q2" value="c"> size-text</label>
+                <label><input type="radio" name="css_q2" value="d"> font-style</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 6 -->
+        <div class="question">
+            <p>6. ¿Qué propiedad de CSS se utiliza para dar margen entre los elementos?</p>
+            <div class="options">
+                <label><input type="radio" name="css_q3" value="a"> margin</label>
+                <label><input type="radio" name="css_q3" value="b"> padding</label>
+                <label><input type="radio" name="css_q3" value="c"> spacing</label>
+                <label><input type="radio" name="css_q3" value="d"> border</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 7 -->
+        <div class="question">
+            <p>7. ¿Qué es un selector en CSS?</p>
+            <div class="options">
+                <label><input type="radio" name="css_q4" value="a"> Un elemento HTML que define un estilo.</label>
+                <label><input type="radio" name="css_q4" value="b"> Un identificador que aplica estilos a elementos específicos.</label>
+                <label><input type="radio" name="css_q4" value="c"> Un archivo que contiene estilos.</label>
+                <label><input type="radio" name="css_q4" value="d"> Ninguna de las anteriores.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 8 -->
+        <div class="question">
+            <p>8. ¿Cómo se incluye un archivo de CSS en HTML?</p>
+            <div class="options">
+                <label><input type="radio" name="css_q5" value="a"> <strong>&lt;link href="styles.css"&gt;</strong></label>
+                <label><input type="radio" name="css_q5" value="b"> <strong>&lt;style src="styles.css"&gt;</strong></label>
+                <label><input type="radio" name="css_q5" value="c"> <strong>&lt;link src="styles.css"&gt;</strong></label>
+                <label><input type="radio" name="css_q5" value="d"> <strong>&lt;script href="styles.css"&gt;</strong></label>
+            </div>
+        </div>
+
+        <!-- Pregunta 9 -->
+        <div class="question">
+            <p>9. ¿Qué es JavaScript?</p>
+            <div class="options">
+                <label><input type="radio" name="js_q1" value="a"> Un lenguaje de programación que se utiliza para crear interactividad en páginas web.</label>
+                <label><input type="radio" name="js_q1" value="b"> Un sistema operativo.</label>
+                <label><input type="radio" name="js_q1" value="c"> Un lenguaje de marcado.</label>
+                <label><input type="radio" name="js_q1" value="d"> Una base de datos.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 10 -->
+        <div class="question">
+            <p>10. ¿Cómo se declara una variable en JavaScript?</p>
+            <div class="options">
+                <label><input type="radio" name="js_q2" value="a"> var</label>
+                <label><input type="radio" name="js_q2" value="b"> let</label>
+                <label><input type="radio" name="js_q2" value="c"> const</label>
+                <label><input type="radio" name="js_q2" value="d"> Todas las anteriores</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 11 -->
+        <div class="question">
+            <p>11. ¿Qué es una función en JavaScript?</p>
+            <div class="options">
+                <label><input type="radio" name="js_q3" value="a"> Un bloque de código que se ejecuta cuando se invoca.</label>
+                <label><input type="radio" name="js_q3" value="b"> Una estructura de control condicional.</label>
+                <label><input type="radio" name="js_q3" value="c"> Una manera de declarar variables.</label>
+                <label><input type="radio" name="js_q3" value="d"> Ninguna de las anteriores.</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 12 -->
+        <div class="question">
+            <p>12. ¿Cómo se escribe un comentario en JavaScript?</p>
+            <div class="options">
+                <label><input type="radio" name="js_q4" value="a"> // Este es un comentario</label>
+                <label><input type="radio" name="js_q4" value="b"> <!-- Este es un comentario --> </label>
+                <label><input type="radio" name="js_q4" value="c"> /* Este es un comentario */</label>
+                <label><input type="radio" name="js_q4" value="d"> Ninguna de las anteriores</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 13 -->
+        <div class="question">
+            <p>13. ¿Cómo se hace un ciclo "for" en JavaScript?</p>
+            <div class="options">
+                <label><input type="radio" name="js_q5" value="a"> for (i=0; i<10; i++)</label>
+                <label><input type="radio" name="js_q5" value="b"> for (i=0; i<=10; i++)</label>
+                <label><input type="radio" name="js_q5" value="c"> for (i=0; i<10) i++</label>
+                <label><input type="radio" name="js_q5" value="d"> Ninguna de las anteriores</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 14 -->
+        <div class="question">
+            <p>14. ¿Qué hace el siguiente código en JavaScript? <strong>console.log("Hola Mundo")</strong></p>
+            <div class="options">
+                <label><input type="radio" name="js_q6" value="a"> Muestra el texto "Hola Mundo" en la consola del navegador.</label>
+                <label><input type="radio" name="js_q6" value="b"> Imprime "Hola Mundo" en la página web.</label>
+                <label><input type="radio" name="js_q6" value="c"> Muestra un alerta con el texto "Hola Mundo".</label>
+                <label><input type="radio" name="js_q6" value="d"> Ninguna de las anteriores</label>
+            </div>
+        </div>
+
+        <!-- Pregunta 15 -->
+        <div class="question">
+            <p>15. ¿Qué es un objeto en JavaScript?</p>
+            <div class="options">
+                <label><input type="radio" name="js_q7" value="a"> Una colección de propiedades y métodos relacionados.</label>
+                <label><input type="radio" name="js_q7" value="b"> Un tipo de variable en JavaScript.</label>
+                <label><input type="radio" name="js_q7" value="c"> Un tipo de bucle en JavaScript.</label>
+                <label><input type="radio" name="js_q7" value="d"> Ninguna de las anteriores</label>
+            </div>
+        </div>
+
+        <!-- Botón para ver resultado -->
+        <button onclick="checkAnswers()">Ver Resultado</button>
+
+        <div id="result" class="result"></div>
+    </div>
+</div>
+
+<script src="entrenamiento.js"></script>
+</body>
+</html>
